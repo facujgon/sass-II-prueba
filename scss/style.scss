@@ -1,0 +1,37 @@
+@import "globales";
+@import "navbar";
+@import "variables";
+@import "index";
+@import "mixins";
+
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+}
+
+.content {
+    @include flexcenter(column);
+    width: 80%;
+    margin: 0 auto;
+
+    &__paragraph--intro {
+        font-weight: map-get($font-weights, bold);
+
+        &:hover {
+            color: yellow;
+
+        }
+    }
+
+    &__paragraph {
+        @extend .content__paragraph--intro;
+
+        &:hover {
+            color: red;
+        }
+    }
+    
+
+}
+
